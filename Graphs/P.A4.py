@@ -14,20 +14,20 @@ def largest_component(graph):
 
         # Traverse all node
         def dfs(node):
-            count_edge = 0
+            count_node = 0
             stk = [node]
             seen.add(node)
 
             while stk:
                 current_node = stk.pop()
-                count_edge +=1
+                count_node +=1
 
                 for nei_node in graph[current_node]:
                     if nei_node not in seen:
                         seen.add(nei_node)
                         stk.append(nei_node)
                         
-            return count_edge
+            return count_node
         
         max_count = max(max_count, dfs(node))
     return max_count
