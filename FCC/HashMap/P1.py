@@ -5,14 +5,13 @@
 # You can return the answer in any order.
 
 from collections import defaultdict
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        value_to_index = defaultdict(int)
+def twoSum(nums, target):
+    value_to_index = defaultdict(int)
 
-        for i in range(len(nums)):
-            remaining = target - nums[i]
+    for i in range(len(nums)):
+        remaining = target - nums[i]
 
-            if remaining in value_to_index:
-                return [i, value_to_index[remaining]]
-            else: 
-                value_to_index[nums[i]] = i
+        if remaining in value_to_index:
+            return [i, value_to_index[remaining]]
+        else: 
+            value_to_index[nums[i]] = i
