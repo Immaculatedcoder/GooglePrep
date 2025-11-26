@@ -17,3 +17,4 @@ def middleNode(head):
         slow = slow.next
 
     return slow
+
