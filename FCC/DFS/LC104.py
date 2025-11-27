@@ -23,17 +23,31 @@ b.left = d
 b.right = e
 d.left = f
 
-def dfs(root):
-  if root is None:
-    return
+# def dfs(root):
+#   if root is None:
+#     return
 
-  print(root.val)
-  dfs(root.left)
-  dfs(root.right)
+#   print(root.val)
+#   dfs(root.left)
+#   dfs(root.right)
 
-dfs(a)
+# dfs(a)
 
-# def maxDepth(root):
-#     def dfs(root):
-#         if root is None:
-#             return
+
+def maxDepth(root):
+    def dfs(root):
+        if root is None:
+            return
+
+def maxDepth(root):
+    def dfs(root):
+        if root is None:
+            return 0
+        
+        left = dfs(root.left)
+        right = dfs(root.right)
+        
+        return 1 + max(right, left)
+    return dfs(root)
+
+print(maxDepth(None))
