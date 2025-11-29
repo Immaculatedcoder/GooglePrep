@@ -48,6 +48,6 @@ def maxDepth(root):
         right = dfs(root.right)
         
         return 1 + max(right, left)
-    return dfs(root)
+    return dfs(root) if root else 0
 
 print(maxDepth(None))
