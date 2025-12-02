@@ -17,7 +17,7 @@ def subsets(nums):
         
         # Choice 1: If we decide to append the current nums[index]
         sol.append(nums[i]) 
-        # We backtrack on this index
+        # We backtrack on this next index
         backtrack(i+1)
         # Undo or action
         sol.pop()
